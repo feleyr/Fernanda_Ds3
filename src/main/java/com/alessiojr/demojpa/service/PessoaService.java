@@ -21,6 +21,7 @@ public class PessoaService {
     }
 
     public List<Pessoa> findAllList(){
+        log.debug("Request to get All Pessoa");
         return pessoaRepository.findAll();
     }
 
