@@ -1,4 +1,4 @@
-package com.alessiojr.demojpa.web;
+package com.alessiojr.demojpa.web.api;
 
 import com.alessiojr.demojpa.domain.Pessoa;
 import com.alessiojr.demojpa.service.PessoaService;

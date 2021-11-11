@@ -1,4 +1,4 @@
-package com.alessiojr.demojpa.web;
+package com.alessiojr.demojpa.web.api;
 
 import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.GetMapping;
