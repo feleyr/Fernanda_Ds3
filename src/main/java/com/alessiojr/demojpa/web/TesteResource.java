@@ -1,5 +1,6 @@
 package com.alessiojr.demojpa.web;
 
+import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(path="/")
+@Api(tags = "Recursos de Teste")
 public class TesteResource {
 
     @GetMapping(path = "/echo")
@@ -18,4 +20,5 @@ public class TesteResource {
     public String helloApp(@PathVariable String name) {
         return "Hello " + name;
     }
+
 }

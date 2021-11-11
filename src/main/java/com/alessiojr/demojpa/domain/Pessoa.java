@@ -30,5 +30,11 @@ public class Pessoa {
     private String uf;
     private Boolean isActive;
 
-
+    public static Pessoa parseNote(String line) {
+        String[] text = line.split(",");
+        Pessoa note = new Pessoa();
+        note.setId(Long.parseLong(text[0]));
+        note.setNome(text[1]);
+        return note;
+    }
 }

@@ -40,4 +40,10 @@ public class PessoaService {
         pessoa = pessoaRepository.save(pessoa);
         return pessoa;
     }
+
+    public List<Pessoa> saveAll(List<Pessoa> pessoas) {
+        log.debug("Request to save Pessoa : {}", pessoas);
+        pessoas = pessoaRepository.saveAll(pessoas);
+        return pessoas;
+    }
 }
