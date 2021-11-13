@@ -6,12 +6,13 @@ import lombok.AllArgsConstructor;
 
 import javax.persistence.*;
 import java.time.Instant;
+//INSERT INTO table_item(nome, tipo, quantidade, is_active) VALUES ('livro', 'amor&gelato', '2','1');
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "table_pessoa")
-public class Pessoa {
+@Entity(name = "table_item")
+public class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,21 +20,13 @@ public class Pessoa {
 
     @Column(name = "nome", length = 64)
     private String nome;
-
-    private Instant dataNascimento;
-    private String cpf;
-    private String telefone;
-    private String cep;
-    private String rua;
-    private String email;
-    private String bairro;
-    private String cidade;
-    private String uf;
+    private String tipo;
+    private String quantidade;
     private Boolean isActive;
 
-    public static Pessoa parseNote(String line) {
+    public static Item parseNote(String line) {
         String[] text = line.split(",");
-        Pessoa note = new Pessoa();
+        Item note = new Item();
         note.setId(Long.parseLong(text[0]));
         note.setNome(text[1]);
         return note;
